@@ -1,0 +1,17 @@
+For 3D Reconstruction:
+• COLMAP – A state-of-the-art SfM and MVS pipeline.
+• OpenMVG/OpenMVS – Open-source multi-view geometry and reconstruction libraries.
+
+For 3D Data Processing:
+• Open3D – An open-source library for working with 3D data (point clouds, meshes, etc.).
+
+For AI/Deep Learning:
+• PyTorch or TensorFlow – For designing and training deep learning models.
+• Libraries/models like PointNet for point cloud processing.
+
+For Image Processing:
+• OpenCV – For feature extraction, image preprocessing, and calibration.
+
+For Data Visualization:
+• Open3D visualization tools
+• matplotlib for 2D plots and debugging.
