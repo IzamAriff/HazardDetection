@@ -1,5 +1,5 @@
 import torch
-from hazard_detection.model import HazardDetectionNet
+from .model import HazardDetectionNet
 
 def predict_hazards(model, input_volume):
     """

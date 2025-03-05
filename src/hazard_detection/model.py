@@ -4,12 +4,15 @@ import torch.nn as nn
 class HazardDetectionNet(nn.Module):
     def __init__(self, input_channels=1, num_classes=2):
         super(HazardDetectionNet, self).__init__()
+
         # A simple 3D CNN architecture for demonstration.
         self.conv1 = nn.Conv3d(input_channels, 8, kernel_size=3, padding=1)
         self.pool = nn.MaxPool3d(2)
         self.conv2 = nn.Conv3d(8, 16, kernel_size=3, padding=1)
+
         # Assume input 32x32x32 becomes 8x8x8 after pooling twice.
         self.fc1 = nn.Linear(16 * 8 * 8 * 8, 64)
+        
         # Two outputs: one for classification, one for regression (hazard coordinates)
         self.fc_class = nn.Linear(64, num_classes)
         self.fc_reg = nn.Linear(64, 3)
