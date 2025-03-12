@@ -1,3 +1,13 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(SampleProject)
+
+find_package(colmap REQUIRED)
+# or to require a specific version: find_package(colmap 3.4 REQUIRED)
+
+add_executable(hello_world hello_world.cc)
+target_link_libraries(hello_world colmap::colmap)
+
 For 3D Reconstruction:
 • COLMAP – A state-of-the-art SfM and MVS pipeline.
 • OpenMVG/OpenMVS – Open-source multi-view geometry and reconstruction libraries.
